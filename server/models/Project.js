@@ -11,6 +11,7 @@ const ProjectSchema = new mongoose.Schema({
     type: String,
     enum: ["Not Started", "In Progress", "Completed"],
   },
+  //   One client can have multiple projects (one(C) to many(P))
   clientId: {
     // Client Id
     type: mongoose.Schema.Types.ObjectId,
