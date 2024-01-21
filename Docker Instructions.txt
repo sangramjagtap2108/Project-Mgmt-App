@@ -1,0 +1,28 @@
+Server -
+Build an image - docker build -t sangy2108/project-mgmt-app-server:1.1 .
+Run container - docker run --env-file .env -d -p 5000:5000 --name project_mgmt_app_server sangy2108/project-mgmt-app-server:1.1
+
+Client -
+Build an image - docker build -t sangy2108/project-mgmt-app-client:1.0 .
+Run container - docker run -d -p 3000:3000 --name project_mgmt_app_client sangy2108/project-mgmt-app-client:1.0
+
+To check images - docker images
+To get all running containers - docker ps
+To get all containers - docker ps -a
+
+Restart container - docker start [container_id or container_name] 
+Stop container - docker stop [container_id or container_name]
+Logs are useful to check if any error is occuring - docker logs [container_id or container_name]
+Remove container - docker rm [container_id or container_name]
+
+In dockerfile -
+Expose 5000 - Container port 
+
+Container port is mapped to local machine port - Host/local machine port:Container port
+5000:5000
+
+In browser -
+localhost:5000(local machine port)
+
+If image/dockerfile is modified then we cant use same container. Either we can create new container with 
+different name or remove the existing container and create the new container with same name

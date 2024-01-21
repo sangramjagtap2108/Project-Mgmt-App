@@ -1,9 +1,9 @@
 # Specify the Base Image
-FROM node:16
+FROM node:14
 
 # Set the Working Directory - This is the directory where your application code will live 
 # inside the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy your package.json and package-lock.json (if available) to the container
 COPY package*.json ./
@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # If your server listens on a port (e.g., 5000), expose that port - Container Port
-EXPOSE 5000
+# EXPOSE 5000
 
 # Define the command to run your app
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "start" ]
