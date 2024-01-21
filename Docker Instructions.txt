@@ -26,3 +26,13 @@ localhost:5000(local machine port)
 
 If image/dockerfile is modified then we cant use same container. Either we can create new container with 
 different name or remove the existing container and create the new container with same name
+
+Push Images to dockerhub -
+1. Create Repository in Docker Hub
+2. Tag Docker Images -
+docker tag sangy2108/project-mgmt-app-server:1.1 sangy2108/project-mgmt-app-server:1.0
+docker tag sangy2108/project-mgmt-app-client:1.0 sangy2108/project-mgmt-app-client:1.0
+3. Log in to Docker Hub
+4. Push the Images to Docker Hub -
+docker push sangy2108/project-mgmt-app-server:1.0
+docker push sangy2108/project-mgmt-app-client:1.0
