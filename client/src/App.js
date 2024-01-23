@@ -8,7 +8,9 @@ import Project from "./pages/Project";
 // InMemoryCache - if new element gets added to list, no need to refresh
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  // uri: "http://localhost:5000/graphql",
+  // uri: "http://172.27.41.229:30008/graphql",
+  uri: "https://my-app.com/graphql",
   cache: new InMemoryCache(),
 });
 

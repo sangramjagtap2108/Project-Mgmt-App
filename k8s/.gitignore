@@ -1,0 +1,4 @@
+tls-secret.yaml
+mongo-secret.yaml
+tls.crt
+tls.key
